@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, Component } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+// import CheckOut from './CheckOut/CheckOut';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Fragment>
+        <CssBaseline /> 
+        <img src={require('./assets/logos/chittawela_black_no_text.png')} alt="" />
+        {/* <CheckOut /> */}
+      </Fragment>
     );
   }
 }
