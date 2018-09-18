@@ -1,0 +1,14 @@
+.Layout {
+   display: grid;
+   grid-template-columns: 6vh 94vh;
+}
+
+.Toolbar {
+    align-self: center;
+    height: 6vh;
+}
+
+.Content {
+    align-self: center;
+    height: 94vh;
+}

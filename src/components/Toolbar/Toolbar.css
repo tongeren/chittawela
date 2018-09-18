@@ -1,0 +1,10 @@
+.Toolbar {
+    display: grid; 
+    width: 100vw; 
+    grid-template-columns: 13vw 47vw 40vw;
+    height: 6vh; 
+    background-color: black; 
+    color: whitesmoke; 
+}
+
+

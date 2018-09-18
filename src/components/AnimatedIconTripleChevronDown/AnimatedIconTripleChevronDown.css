@@ -1,0 +1,24 @@
+.Icon {
+    align-self: center;
+    height: 4vh;
+}
+
+.Icon svg {
+    fill: whitesmoke;
+}
+
+.Animation {
+    animation-iteration-count: infinite;
+    animation-name: moveUpDown;
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(0.09, 0.55, 0.58, 0.96);
+    animation-fill-mode: both;
+    align-self: center;
+}
+
+@keyframes moveUpDown {
+    0% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, 2.4vh, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}

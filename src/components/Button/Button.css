@@ -1,0 +1,25 @@
+.Button {
+    align-self: center;
+    background-color: #8f7a49;
+    border-radius: 0; 
+    border: 0.2vw solid whitesmoke;
+    display: inline-block;
+    cursor: pointer;
+    color:whitesmoke; 
+    font-family: 'Roboto';
+    font-size: 3vw;
+    letter-spacing: 0.5vw;
+    height: 5vh; 
+    width: 39vw;
+    text-decoration: none;
+    /* text-shadow: 0vw 0.2vw 0vw #8f7a49; */
+}
+  
+.Button:hover {
+    background-color:#8f7a49;;
+}
+
+.Button:active {
+    position: relative;
+    top: 0.2vw;
+}
