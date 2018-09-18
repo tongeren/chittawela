@@ -1,24 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from './Banner.css';
 
 import backGround from '../../assets/images/Banburee/IMG_8560.JPG';
-import AnimatedIconTripleChevronDown from 
-'../../components/AnimatedIconTripleChevronDown/AnimatedIconTripleChevronDown';
 
-import TagLine from '../../components/TagLine/TagLine';
-import BigLogo from '../../components/BigLogo/BigLogo';
+class Banner extends Component {
 
-const banner = () => (
-    <div className={classes.ImageContainer}>
-        {/* <div className={classes.Animation}> */}
-            <img className={classes.Image} src={backGround} alt="Background"/>
-            <div className={classes.LogoAndTagLine}>
-                <BigLogo />
-                <TagLine />  
-                <AnimatedIconTripleChevronDown />
-            </div>  
-        {/* </div> */}
-    </div>
-);
+    render () {
+        /* let style = {
 
-export default banner;
+        } */
+
+        return (
+            <div className={classes.ImageContainer}>
+                {/* <div className={classes.Animation}> */}
+                <img className={classes.Image} src={backGround} alt="Background"/>
+                <div className={classes.LogoAndTagLine}>
+                    {this.props.children}
+                </div>  
+                {/* </div> */}
+            </div>
+        )
+    };
+}
+
+export default Banner;
