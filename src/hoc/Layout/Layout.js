@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import classes from './Layout.css';
 import Toolbar from '../../components/Toolbar/Toolbar';
 import SideDrawer from '../../components/SideDrawer/SideDrawer';
+import AnimatedIconTripleChevronDown from '../../components/AnimatedIconTripleChevronDown/AnimatedIconTripleChevronDown';
+import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
   state = {
@@ -20,12 +21,15 @@ class Layout extends Component {
 
   render () {
     return (
-      <div clasName={classes.Layout}>
+      <div>
         <Toolbar drawerToggleClicked={this.sideDrawerToggledHandler}/>
         <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} /> 
-        <main className={classes.Content}>
+        <main>
           {this.props.children}
         </main>
+        <Footer>
+          <AnimatedIconTripleChevronDown />
+        </Footer>
       </div>
     )};
 }

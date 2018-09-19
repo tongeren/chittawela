@@ -1,4 +1,5 @@
 .Logo {
-    max-width: 70%; 
+    max-width: 80%; 
     align-self: center;
+    max-height: 64vh; /* 100-6-20=74 Toolbar=6vh Banner=94vh Logo=20vh*/
 }
