@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Toolbar from '../../components/Toolbar/Toolbar';
-import SideDrawer from '../../components/SideDrawer/SideDrawer';
-import AnimatedIconTripleChevronDown from '../../components/AnimatedIconTripleChevronDown/AnimatedIconTripleChevronDown';
-import Footer from '../../components/Footer/Footer';
+import classes from './Layout.css';
+import Toolbar from '../../components/navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/navigation/SideDrawer/SideDrawer';
+import AnimatedIconTripleChevronDown from '../../components/navigation/AnimatedIconTripleChevronDown/AnimatedIconTripleChevronDown';
+import Footer from '../../containers/Footer/Footer';
 
 class Layout extends Component {
   state = {
@@ -19,16 +20,20 @@ class Layout extends Component {
     } );
   }
 
+  tripleChevronDownClickedHandler = () => {
+    console.log("Get me to the next page!");
+  }
+
   render () {
     return (
       <div>
         <Toolbar drawerToggleClicked={this.sideDrawerToggledHandler}/>
         <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} /> 
-        <main>
+        <main className={classes.Main}>
           {this.props.children}
         </main>
         <Footer>
-          <AnimatedIconTripleChevronDown />
+          <AnimatedIconTripleChevronDown clicked={this.tripleChevronDownClickedHandler}/>
         </Footer>
       </div>
     )};

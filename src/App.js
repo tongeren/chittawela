@@ -1,15 +1,15 @@
 import React, { Fragment, Component } from 'react';
-// import { BrowserRouter } from 'react-router-dom';
-import HomePage from './pages/HomePage/HomePage';
+import { BrowserRouter } from 'react-router-dom';
+import ChittawelaPage from './containers/ChittawelaPage/ChittawelaPage';
 
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        {/* <BrowserRouter> */}
-          <HomePage />
-        {/* </BrowserRouter> */}
-      </Fragment>
+      <BrowserRouter>
+        <Fragment>
+          <ChittawelaPage />
+        </Fragment>  
+      </BrowserRouter>
     );
   }
 }
