@@ -1,16 +1,11 @@
 import React from 'react';
+import { Image } from 'cloudinary-react';
+import classes from './ImageSlide.css';
 
 const imageSlide = (props) => {
-    console.log(`url(`+props.path+ props.file+`)`);
-
-    const styles = {
-      backgroundImage: `url(`+props.path+ props.file+`)`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center'
-    };
   
     return (
-      <div className="image-slide" style={styles}></div>
+      <Image className={classes.Image} publicId={props.publicId}></Image>
     );
 }
 

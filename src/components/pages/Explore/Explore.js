@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
-// import Carousel from '../../UI/Carousel/Carousel';
+import Carousel from '../../UI/Carousel/Carousel';
+import IMAGES from './Images';
 
 const TEXT = "จิตตเวฬา - Chittawela In Pali-Sanskrit language Chittawela means the time for your heart." 
 // As the world and your lives seem to go ever faster, you need Chittawela - 
@@ -10,11 +11,9 @@ const TEXT = "จิตตเวฬา - Chittawela In Pali-Sanskrit language Ch
 // Experience the beautiful surroundings, fascinating culture and a healthy lifestyle. 
 // Exchange inspiration with other guests."
 
-
-
 const explore = () => (
   <Fragment>
-    {/* <Carousel imageURLs={} /> */}
+    <Carousel imgPaths={IMAGES.map(image => image.publicId)} autoSlideInterval={4} /> 
     <p>{TEXT}</p>
   </Fragment>
 );
