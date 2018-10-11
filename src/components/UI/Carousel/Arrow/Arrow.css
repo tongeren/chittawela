@@ -1,16 +1,20 @@
-/* .Arrow {
-	color: black;
-	cursor: pointer;
-	font-size: 2rem; 
-	position: float;
-	top: 50%; 
-	left: left; 
+.Arrow {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #fff;
+	opacity: 0.7;
 }
 
+.Arrow:hover {
+  	opacity: 1;
+}
+  
 .Right {
 	right: 0;
 }
 
 .Left {
 	left: 0;
-} */
+} 

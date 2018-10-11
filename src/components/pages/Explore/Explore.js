@@ -13,7 +13,7 @@ const TEXT = "จิตตเวฬา - Chittawela In Pali-Sanskrit language Ch
 
 const explore = () => (
   <Fragment>
-    <Carousel imgPaths={IMAGES.map(image => image.publicId)} autoSlideInterval={4} /> 
+    <Carousel imgPaths={IMAGES.map(image => image.publicId)} autoSlideInterval={3.2} /> 
     <p>{TEXT}</p>
   </Fragment>
 );
