@@ -12,23 +12,38 @@ class Carousel extends Component {
         currentImageIndex: 0
     }
 
-    componentDidMount() {
+    startAutoSlide = () => {
         const milliseconds = this.props.autoSlideInterval * 1000;
         // Start autoslide
         this.autoSlide = window.setInterval(() => this.nextSlide() , milliseconds);
     }
-  
-    componentWillUnmount() {
+
+    stopAutoSlide = () => {
         // Stop autoslide 
         window.clearInterval(this.autoSlide);
     }
 
+    resetAutoSlide = () => {
+        this.stopAutoSlide();
+        this.startAutoSlide();
+    }
+
+    componentDidMount() {
+        this.startAutoSlide();
+    }
+  
+    componentWillUnmount() {
+        this.stopAutoSlide();
+    }
+
     previousSlide = () => {
         this.getSlide({flagForward: false});
+        this.resetAutoSlide();
     }
     
     nextSlide = () => {
         this.getSlide({flagForward: true});
+        this.resetAutoSlide();
     }
 
     getSlide = ({ flagForward }) => {

@@ -1,10 +1,10 @@
-.DrawerToggle {
-    /* align-self: center; */
+.DrawerToggle {  
     margin: auto;
-    height: 5vh; 
-}
+    height: 4vh; 
+} 
 
-/* .DrawerToggle .MenuItem {
-    text-align: center;
-    display: inline-block;
-} */
+.MenuIcon {
+    align-self: center;
+    margin: auto;
+    height: 4vh; 
+}

@@ -2,6 +2,7 @@ import Home from '../components/pages/Home/Home';
 import Explore from '../components/pages/Explore/Explore';
 import Guide from '../components/pages/Guide/Guide';
 import Sanctuary from '../components/pages/Sanctuary/Sanctuary';
+import AboutUs from '../components/pages/AboutUs/AboutUs';
 import Contact from '../components/pages/Contact/Contact'; 
 
 // Route configuration & navigation
@@ -25,6 +26,11 @@ export const ROUTES = [
         path: "/sanctuary",
         component: Sanctuary,
         navText: "Your Sanctuary"
+    },
+    {
+        path: "/about",
+        component: AboutUs,
+        navText: "Chittawela"
     },
     {
         path: "/contact",

@@ -4,6 +4,7 @@ import Toolbar from '../../components/navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/navigation/SideDrawer/SideDrawer';
 import AnimatedIconTripleChevronDown from '../../components/navigation/AnimatedIconTripleChevronDown/AnimatedIconTripleChevronDown';
 import Footer from '../../containers/Footer/Footer';
+import Music from '../../components/UI/Music/Music';
 
 class Layout extends Component {
   state = {
@@ -20,10 +21,6 @@ class Layout extends Component {
     } );
   }
 
-  tripleChevronDownClickedHandler = () => {
-    console.log("Get me to the next page!");
-  }
-
   render () {
     return (
       <div>
@@ -31,12 +28,14 @@ class Layout extends Component {
         <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} /> 
         <main className={classes.Main}>
           {this.props.children}
-        </main>
+        </main> 
         <Footer>
-          <AnimatedIconTripleChevronDown clicked={this.tripleChevronDownClickedHandler}/>
+          <Music />
+          <AnimatedIconTripleChevronDown />
         </Footer>
       </div>
     )};
 }
 
 export default Layout;
+

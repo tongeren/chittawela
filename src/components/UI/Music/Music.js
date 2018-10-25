@@ -1,48 +1,32 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
+import classes from './Music.css';
 import song from '../../../assets/music/Love_at_Sundown.mp3';
-// import silence from '../../../assets/music/silence.mp3';
-// import song from './Song';
+import playIcon from '../../../assets/icons/Play.svg';
+import pauseIcon from '../../../assets/icons/Pause.svg';
 
-import Sound from 'react-sound';
-// import cloudinary from 'cloudinary-core';
+class Music extends Component {
+    state = {
+        muted: true
+    }
 
-// const cloudinaryCore = new cloudinary.Cloudinary({cloud_name: 'chittawela'});
+    toggleMusicOnOff = () => {
+        this.setState( (prevState) => {
+            return { muted: !prevState.muted };
+        } );
+    } 
 
-// const SONG = '../../../assets/music/Love_at_Sundown.mp3';
+    render() {
+        let playerIcon = this.state.muted ? playIcon : pauseIcon;
 
-// const song = cloudinaryCore.url('Music/Love_at_Sundown.mp3');
-
-const soundError = (errorCode, description) => (
-    console.log(errorCode + ':' + description)
-)
-
-const MUSIC_SETTINGS = {
-    url: song, /* cloudinaryCore.url('Music/Love_at_Sundown.mp3'), */
-    playStatus: Sound.status.PLAYING,
-    volume: 50,
-    autoLoad: true,
-    loop: true,
-    onError: soundError()
-};
-
-const music = () => {
-    
-    // window.onload = function() {
-    //    var context = new AudioContext();
-    // }
-    
-    return(
-        <Fragment>
-            <Sound {...MUSIC_SETTINGS} /> 
-     
-            {/* <iframe title="iframe" src={silence} allow="autoplay" id="audio" style={{display:`none`}}></iframe> */}
-            {/*
-            <audio loop autoPlay> 
-                <source src={song} type="audio/mp3" />
-            </audio>
-            */}
-        </Fragment>
-    );    
+        return(
+            <Fragment>
+                <img className={classes.Icon} onClick={this.toggleMusicOnOff} src={playerIcon} alt="playerIcon" />
+                <audio loop muted={this.state.muted} autoPlay> 
+                    <source src={song} type="audio/mp3" />
+                </audio>
+            </Fragment>
+        );
+    }        
 }
 
-export default music;
+export default Music;

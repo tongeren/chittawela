@@ -1,9 +1,10 @@
 import React from 'react';
+import classes from './Contact.css';
 
 const contact = () => (
   <div>
-    <h1>Contact Us!</h1>
-    <p>Chittawela<br />
+    <h1 className={classes.Title}>Contact Us!</h1>
+    <p className={classes.Contact}>Chittawela<br />
         99/589 Mubaan Phimuk 1<br /> 
         Phase 6 Soi 20<br />
         T. Sansainoi A. Sansai<br />

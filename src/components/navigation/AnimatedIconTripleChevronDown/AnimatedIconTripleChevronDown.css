@@ -3,10 +3,6 @@
     height: 4vh;
 }
 
-.Icon svg {
-    fill: whitesmoke;
-}
-
 .Animation {
     animation-iteration-count: infinite;
     animation-name: moveUpDown;

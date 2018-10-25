@@ -1,0 +1,14 @@
+.Main {
+    display: grid;
+    grid-template-columns: 40vw 5vw 55vw;
+}
+
+.Image {
+    grid-column-start: 1;
+    max-width: 40vw;
+    padding: 2vw 2vw 2vw 2vw;
+}
+
+.Text {
+    grid-column-start: 3;
+}

@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './DrawerToggle.css';
-import MenuIcon from './MenuIcon/MenuIcon';
+import menuIconsvg from '../../../../assets/icons/Menu.svg';
 
 const drawerToggle = (props) => (
   <div className={classes.DrawerToggle} onClick={props.clicked}>
-    <MenuIcon />
+    <img className={classes.MenuIcon} src={menuIconsvg} alt="MenuIcon" />
   </div>
 );
 

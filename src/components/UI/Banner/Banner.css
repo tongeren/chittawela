@@ -6,7 +6,7 @@
     overflow: hidden; 
     align-self: center; 
     height: 94vh; /* let Banner height fill up the remaining free page height */
-    z-index: -1; /* make sure the banner is always behind */
+    z-index: 0; /* make sure the banner is always behind */
 }
 
 .Image {    
