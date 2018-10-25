@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import { CloudinaryContext } from 'cloudinary-react';
 import classes from './Carousel.css';
-// import Arrow from './Arrow/Arrow';
+import Arrow from './Arrow/Arrow';
 import ImageSlide from './ImageSlide/ImageSlide';
+
+const GLYPH_LEFT = "<"; 
+const GLYPH_RIGHT = ">"; 
 
 class Carousel extends Component {
     state = {
@@ -44,21 +47,11 @@ class Carousel extends Component {
         return (
             <CloudinaryContext cloudName="chittawela">
                 <div className={classes.Carousel}>
-                    {/* <Arrow 
-                        className={classes.ArrowLeft}
-                        direction="left"
-                        clickFunction={this.previousSlide}
-                    glyph="&#9664;" /> */}
-                
-                    <ImageSlide 
-                        className={classes.ImageSlide}
-                        imgPaths={this.props.imgPaths}/>
+                    <Arrow className={classes.ArrowLeft} direction="left" clickFunction={this.previousSlide} glyph={GLYPH_LEFT}/> 
+
+                    <ImageSlide className={classes.ImageSlide} imgPaths={this.props.imgPaths} selectedSlide={this.state.currentImageIndex}/>
     
-                    {/* <Arrow
-                        className={classes.ArrowRight}
-                        direction="right"
-                        clickFunction={this.nextSlide}
-                    glyph="&#9654;" /> */}
+                    <Arrow className={classes.ArrowRight} direction="right" clickFunction={this.nextSlide} glyph={GLYPH_RIGHT} /> 
                 </div>
             </CloudinaryContext> 
         );

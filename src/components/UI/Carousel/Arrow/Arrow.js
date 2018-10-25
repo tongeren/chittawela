@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import classes from './Arrow.css';
 
-const arrow = ({ direction, clickFunction, glyph }) => {
-  let attachedClasses = (direction === "right" ? [classes.Arrow, classes.Right] : [classes.Arrow, classes.Left]);
+const arrow = (props) => {
+  let attachedClasses = (props.direction === "right" 
+    ? [props.className, classes.Arrow, classes.Right] 
+    : [props.className, classes.Arrow, classes.Left]);
 
   return(
-    <div className={attachedClasses.join(' ')} onClick={ clickFunction }>
-      { glyph }
-    </div>
+    <Fragment>
+      <div className={attachedClasses.join(' ')} onClick={ props.clickFunction }> 
+        { props.glyph }
+      </div>
+    </Fragment>
   );
 }
 

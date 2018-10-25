@@ -1,16 +1,9 @@
-.Image {
-    width: 100vw;
+.Wrapper
+{
+    min-width: 100%;
 }
 
 
-/*
 .Image {
-    display: flex; 
-    position: relative; 
-    justify-content: center;
-    align-items: center; 
-    overflow: hidden; 
-    max-width: 25vw; 
-    transition: background-image .3s ease-in-out;
-} 
-*/
+    width: 100vw;
+}
