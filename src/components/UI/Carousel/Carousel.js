@@ -62,11 +62,22 @@ class Carousel extends Component {
         return (
             <CloudinaryContext cloudName="chittawela">
                 <div className={classes.Carousel}>
-                    <Arrow className={classes.ArrowLeft} direction="left" clickFunction={this.previousSlide} glyph={GLYPH_LEFT}/> 
+                    <Arrow 
+                        className={classes.ArrowLeft} 
+                        direction="left" 
+                        clickFunction={this.previousSlide} 
+                        glyph={GLYPH_LEFT}/> 
 
-                    <ImageSlide className={classes.ImageSlide} imgPaths={this.props.imgPaths} selectedSlide={this.state.currentImageIndex}/>
+                    <ImageSlide 
+                        className={classes.ImageSlide} 
+                        imgPaths={this.props.imgPaths} 
+                        selectedSlide={this.state.currentImageIndex}/>
     
-                    <Arrow className={classes.ArrowRight} direction="right" clickFunction={this.nextSlide} glyph={GLYPH_RIGHT} /> 
+                    <Arrow 
+                        className={classes.ArrowRight} 
+                        direction="right" 
+                        clickFunction={this.nextSlide} 
+                        glyph={GLYPH_RIGHT} /> 
                 </div>
             </CloudinaryContext> 
         );

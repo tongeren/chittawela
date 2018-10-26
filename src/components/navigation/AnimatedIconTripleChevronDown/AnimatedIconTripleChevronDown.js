@@ -9,8 +9,10 @@ const animatedIconTripleChevronDown = (props) => {
     var page = nextPage(currentPath);
 
     return(
-        <div className={classes.Animation}>
-            <img className={classes.Icon} onClick={() => props.history.push(page)} src={tripleChevronDownIcon} alt="MenuIcon" />
+        <div className={props.className}>
+            <div className={classes.Animation}>
+                <img className={classes.Icon} onClick={() => props.history.push(page)} src={tripleChevronDownIcon} alt="MenuIcon" />
+            </div>      
         </div>
     );       
 }

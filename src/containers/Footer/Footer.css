@@ -1,8 +1,16 @@
 .Footer {
+    display: grid;
+    grid-template-columns: 5vw 10vw 30vw 10vw 45vw;
     position: absolute;
-    display: flex;
     justify-content: center;
-    /* align-items: center; */
     bottom: 4vh;
     width: 100vw;
+}
+
+.ToggleMusic {
+    grid-column-start: 2;
+}
+
+.NextPage {
+    grid-column-start: 4;
 }
