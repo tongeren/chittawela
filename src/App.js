@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ChittawelaPage from './containers/ChittawelaPage/ChittawelaPage';
 
-class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-          <ChittawelaPage />
-      </BrowserRouter>
-    );
-  }
-}
+const app = () => (
+  <BrowserRouter>
+    <ChittawelaPage />
+  </BrowserRouter>
+);
 
-export default App;
+export default app;
 
